@@ -6,6 +6,9 @@ interface IProps {
   duration: number;
 }
 const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   border-radius: 5px;
   background: purple;
@@ -16,6 +19,7 @@ const Div = styled.div`
 const Span = styled.span`
   padding: 2px;
 `;
+
 const Timer: FC<IProps> = ({ duration }) => {
   const timerRef = useRef<any>();
   const [durationLeft, setDurationLeft] = useState<number>(0);
